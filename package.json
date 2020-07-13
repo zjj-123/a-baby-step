@@ -6,7 +6,8 @@
     "client": "vue-cli-service serve",
     "server": "cd server & node express-demo.js ",
     "build": "vue-cli-service build",
-    "lint": "vue-cli-service lint"
+    "lint": "vue-cli-service lint",
+    "prelint": "prettier --write \"**/*.{js,vue,json,md,less}\""
   },
   "dependencies": {
     "axios": "^0.19.2",

@@ -1,8 +1,8 @@
-const webpack = require("webpack");
+const webpack = require('webpack');
 
 module.exports = {
-  publicPath: "./",
-  assetsDir: "static",
+  publicPath: './',
+  assetsDir: 'static',
   productionSourceMap: true,
   configureWebpack: {
     plugins: [new webpack.DefinePlugin({})]
