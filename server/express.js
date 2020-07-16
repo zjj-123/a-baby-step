@@ -1,5 +1,5 @@
 const express = require('express');
-const register = require('./router/account/register.js');
+const register = require('./router/account/register');
 var app = express();
 
 app.use('/login', register);
