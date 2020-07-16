@@ -4,7 +4,7 @@
   "private": true,
   "scripts": {
     "client": "vue-cli-service serve",
-    "server": "cd server & node express-demo.js ",
+    "server": "cd server & node express.js ",
     "build": "vue-cli-service build",
     "lint": "vue-cli-service lint",
     "prelint": "prettier --write \"**/*.{js,vue,json,md,less}\""
@@ -17,6 +17,7 @@
     "element-ui": "^2.13.2",
     "express": "^4.17.1",
     "multer": "^1.4.2",
+    "mysql2": "^2.1.0",
     "normalize.css": "^8.0.1",
     "sequelize": "^6.3.1",
     "vue": "^2.6.11",
