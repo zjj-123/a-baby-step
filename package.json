@@ -4,7 +4,7 @@
   "private": true,
   "scripts": {
     "client": "vue-cli-service serve",
-    "server": "cd server & node express.js ",
+    "server": "nodemon server/express.js ",
     "build": "vue-cli-service build",
     "lint": "vue-cli-service lint",
     "prelint": "prettier --write \"**/*.{js,vue,json,md,less}\""
@@ -39,6 +39,7 @@
     "eslint-plugin-vue": "^6.2.2",
     "less": "^3.0.4",
     "less-loader": "^5.0.0",
+    "nodemon": "^2.0.4",
     "prettier": "^1.19.1",
     "vue-template-compiler": "^2.6.11"
   }
