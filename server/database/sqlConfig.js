@@ -17,4 +17,8 @@ const sequelize = new Sequelize(
   }
 );
 
+(function() {
+  sequelize.sync({ force: true });
+})();
+
 module.exports = sequelize;

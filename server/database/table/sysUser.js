@@ -27,6 +27,4 @@ var sysUser = sequelize.define(
   }
 );
 
-sysUser.sync({ force: true });
-
 module.exports = sysUser;

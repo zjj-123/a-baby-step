@@ -1,12 +1,19 @@
 <template>
   <div id="app">
-    <div id="nav">
-      <router-link to="/">Home</router-link> |
-      <router-link to="/about">About</router-link>
-    </div>
+    <HorizonMenu />
     <router-view />
   </div>
 </template>
+
+<script>
+import HorizonMenu from '@/components/HorizonMenu.vue';
+
+export default {
+  components: {
+    HorizonMenu
+  }
+};
+</script>
 
 <style lang="less">
 #app {
