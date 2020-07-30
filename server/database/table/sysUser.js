@@ -1,7 +1,7 @@
 const Sequelize = require('sequelize');
 const sequelize = require('../sqlConfig');
 
-var sysUser = sequelize.define(
+const sysUser = sequelize.define(
   'sys_user',
   {
     id: {

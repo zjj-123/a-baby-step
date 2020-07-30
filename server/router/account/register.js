@@ -1,7 +1,6 @@
 const express = require('express');
 const sysUser = require('../../database/map/sysUser');
-
-var router = express.Router();
+const router = express.Router();
 
 router.get('/', function(req, res) {
   console.log('/');
