@@ -72,11 +72,15 @@ export default {
       let moveTop = clientY - this.top - 10;
       if (this.maxLeft < moveLeft) {
         this.moveElement.style.left = this.maxLeft + 'px';
+      } else if (moveLeft < 0) {
+        this.moveElement.style.left = 0;
       } else {
         this.moveElement.style.left = moveLeft + 'px';
       }
       if (this.maxTop < moveTop) {
         this.moveElement.style.top = this.maxTop + 'px';
+      } else if (moveTop < 0) {
+        this.moveElement.style.top = 0;
       } else {
         this.moveElement.style.top = moveTop + 'px';
       }
