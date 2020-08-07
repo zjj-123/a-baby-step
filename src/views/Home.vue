@@ -194,13 +194,9 @@ body {
   position: absolute;
   pointer-events: none;
   visibility: hidden;
-  -webkit-mask-image: radial-gradient(
-    circle at center,
-    white 0%,
-    transparent 80px
-  );
-  -webkit-mask-repeat: no-repeat;
-  -webkit-mask-size: 160px 160px;
+  mask-image: radial-gradient(circle at center, white 0%, transparent 80px);
+  mask-repeat: no-repeat;
+  mask-size: 160px 160px;
 }
 
 .calendar:hover .border-layer {
