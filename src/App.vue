@@ -1,30 +1,51 @@
 <template>
   <div id="app">
-    <!-- <HorizonMenu /> -->
-    <router-view />
+    <div id="app__left">
+      <router-view />
+    </div>
+    <div id="app__right">
+      <TimeLine />
+    </div>
   </div>
 </template>
 
 <script>
-export default {};
+import TimeLine from './components/TimeLine';
+
+export default {
+  components: {
+    TimeLine: TimeLine
+  }
+};
 </script>
 
 <style lang="less">
-body {
+#app__left {
+  overflow: hidden;
+}
+
+#app {
   position: fixed;
   top: 0;
   bottom: 0;
   left: 0;
   right: 0;
-}
 
-// #app {
-//   font-family: Avenir, Helvetica, Arial, sans-serif;
-//   -webkit-font-smoothing: antialiased;
-//   -moz-osx-font-smoothing: grayscale;
-//   text-align: center;
-//   color: #2c3e50;
-// }
+  font-family: Avenir, Helvetica, Arial, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  display: flex;
+
+  #app__left {
+    width: 80%;
+    height: 100%;
+  }
+  #app__right {
+    width: 20%;
+    height: 100%;
+    min-width: 200px;
+  }
+}
 
 #nav {
   padding: 30px;
