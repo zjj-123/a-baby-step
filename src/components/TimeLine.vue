@@ -49,6 +49,7 @@ export default {
   },
   methods: {
     clickItem(e) {
+      if (this.$route.path === e.path) return;
       this.$router.replace(e.path);
     }
   }
