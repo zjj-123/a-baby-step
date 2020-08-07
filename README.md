@@ -6,16 +6,22 @@
 yarn install
 ```
 
-### Compiles and hot-reloads for development
+### 开发--前
 
 ```
-yarn serve
+yarn client
 ```
 
-### Compiles and minifies for production
+### 开发--后
 
 ```
-yarn build
+yarn server
+```
+
+### 开发
+
+```
+yarn start
 ```
 
 ### Lints and fixes files
@@ -23,7 +29,3 @@ yarn build
 ```
 yarn lint
 ```
-
-### Customize configuration
-
-See [Configuration Reference](https://cli.vuejs.org/config/).
