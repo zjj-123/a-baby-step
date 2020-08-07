@@ -5,6 +5,7 @@
   "scripts": {
     "client": "vue-cli-service serve",
     "server": "nodemon server/express.js ",
+    "start": "concurrently \"npm run server\" \"npm run client\"",
     "build": "vue-cli-service build",
     "lint": "vue-cli-service lint",
     "prelint": "prettier --write \"**/*.{js,vue,json,md,less}\""
