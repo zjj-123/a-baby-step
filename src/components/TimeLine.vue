@@ -43,6 +43,11 @@ export default {
           content: '拖拽',
           timestamp: '2020-08-07',
           path: '/dragAndDrop'
+        },
+        {
+          content: 'Grid',
+          timestamp: '2020-08-10',
+          path: '/gridTest'
         }
       ]
     };

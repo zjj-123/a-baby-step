@@ -1,7 +1,6 @@
 <template>
   <div class="Home__Body">
     <card :data="cardData">
-      <div>这是身体</div>
       <template v-slot:footer>这是JIO</template>
     </card>
   </div>
@@ -21,9 +20,11 @@ export default {
         title: '头部可进行拖拽',
         body: 'body',
         footer: 'footer'
-      }
+      },
+      imageUrl: ''
     };
-  }
+  },
+  methods: {}
 };
 </script>
 
@@ -34,5 +35,8 @@ export default {
 }
 .card {
   width: 200px;
+}
+.avatar {
+  width: 100%;
 }
 </style>

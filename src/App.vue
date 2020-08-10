@@ -39,6 +39,7 @@ export default {
   #app__left {
     width: 80%;
     height: 100%;
+    overflow: auto;
   }
   #app__right {
     width: 20%;
