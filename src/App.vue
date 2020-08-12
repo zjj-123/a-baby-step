@@ -38,6 +38,11 @@ export default {
           content: '组件封装',
           timestamp: '2020-08-11',
           path: '/myEleTable'
+        },
+        {
+          content: '翻牌时钟',
+          timestamp: '2020-08-12',
+          path: '/flipper'
         }
       ]
     };
