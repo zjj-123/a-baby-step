@@ -25,10 +25,12 @@ const routes = [
   {
     path: '/gridTest',
     name: 'GridTest',
-    // route level code-splitting
-    // this generates a separate chunk (about.[hash].js) for this route
-    // which is lazy-loaded when the route is visited.
     component: () => import('../views/GridTest.vue')
+  },
+  {
+    path: '/myEleTable',
+    name: 'MyEleTable',
+    component: () => import('../views/MyEleTable.vue')
   }
 ];
 

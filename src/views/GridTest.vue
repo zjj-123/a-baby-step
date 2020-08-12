@@ -1,44 +1,62 @@
-/* 关于Grid */
+/* 关于Grid https://juejin.im/post/6854573220306255880 */
 <template>
-  <div class="GridText">
+  <div class="Grid__Text">
     <el-tabs v-model="activeName" @tab-click="handleClick">
       <el-tab-pane label="FlowAuto" name="first">
+        <!-- first -->
         <h3>自动布局，先行后列</h3>
         <div class="wrapper">
-          <div class="item" v-for="item in gridList" :key="'row:' + item.value" :style="item.style">
+          <div
+            class="Grid__item"
+            v-for="item in gridList"
+            :key="'row:' + item.value"
+            :style="item.style"
+          >
             {{ item.value }}
           </div>
         </div>
         <h3>先行后列 dense</h3>
         <div class="wrapper" style="grid-auto-flow: row dense;">
-          <div class="item" v-for="item in gridList" :key="'dense:' + item.value" :style="item.style">
+          <div
+            class="Grid__item"
+            v-for="item in gridList"
+            :key="'dense:' + item.value"
+            :style="item.style"
+          >
             {{ item.value }}
           </div>
         </div>
         <h3>先列后行</h3>
         <div class="wrapper" style="grid-auto-flow: column;">
-          <div class="item" v-for="item in gridList" :key="'col:' + item.value" :style="item.style">
+          <div
+            class="Grid__item"
+            v-for="item in gridList"
+            :key="'col:' + item.value"
+            :style="item.style"
+          >
             {{ item.value }}
           </div>
         </div>
       </el-tab-pane>
+      <!-- second -->
       <el-tab-pane label="Areas" name="second">
         <div class="wrapper-areas">
-          <div class="item header ">header</div>
-          <div class="item sideLeft ">sideLeft</div>
-          <div class="item sideRight">sideRight</div>
-          <div class="item body">body</div>
-          <div class="item footer">footer</div>
+          <div class="Grid__item Grid__header ">header</div>
+          <div class="Grid__item Grid__sideLeft ">sideLeft</div>
+          <div class="Grid__item Grid__sideRight">sideRight</div>
+          <div class="Grid__item Grid__body">body</div>
+          <div class="Grid__item Grid__footer">footer</div>
         </div>
       </el-tab-pane>
+      <!-- third -->
       <el-tab-pane label="GridStartEnd" name="third">
         <div class="wrapper-startend">
-          <div class="one item">One</div>
-          <div class="two item">Two</div>
-          <div class="three item">Three</div>
-          <div class="four item">Four</div>
-          <div class="five item">Five</div>
-          <div class="six item">Six</div>
+          <div class="Grid__one Grid__item">One</div>
+          <div class="Grid__two Grid__item">Two</div>
+          <div class="Grid__three Grid__item">Three</div>
+          <div class="Grid__four Grid__item">Four</div>
+          <div class="Grid__five Grid__item">Five</div>
+          <div class="Grid__six Grid__item">Six</div>
         </div>
       </el-tab-pane>
     </el-tabs>
@@ -59,37 +77,38 @@ export default {
       activeName: 'first',
       gridList: [
         {
-          value:'1',
-          style:'grid-column-start: span 1;background-color:red'
-        }, 
+          value: '1',
+          style: 'grid-column-start: span 1;background-color:red'
+        },
         {
-          value:'2',
-          style:'background-color:#338833;'
-        }, 
+          value: '2',
+          style: 'background-color:#338833;'
+        },
         {
-          value:'3',
-          style:'grid-column-start: span 2;background-color:#336699;'
-        }, 
+          value: '3',
+          style: 'grid-column-start: span 2;background-color:#336699;'
+        },
         {
-          value:'4',
-          style:'grid-column-start: span 2;background-color:#4477dd;'
-        }, 
+          value: '4',
+          style: 'grid-column-start: span 2;background-color:#4477dd;'
+        },
         {
-          value:'5',
-          style:'background-color:#aa6699;'
-        }, 
+          value: '5',
+          style: 'background-color:#aa6699;'
+        },
         {
-          value:'6',
-          style:'background-color:#aa66ff;'
-        }, 
+          value: '6',
+          style: 'background-color:#aa66ff;'
+        },
         {
-          value:'7',
-          style:'background-color:#aaffff;'
-        }, 
+          value: '7',
+          style: 'background-color:#aaffff;'
+        },
         {
-          value:'8',
-          style:'background-color:#f0f0f0;'
-        }]
+          value: '8',
+          style: 'background-color:#f0f0f0;'
+        }
+      ]
     };
   },
   methods: {
@@ -123,27 +142,27 @@ export default {
     'sideLeft body body body sideRight'
     '. footer footer footer . ';
 }
-.GridText {
+.Grid__Text {
   width: 600px;
   margin: 0 auto;
 }
-.header {
+.Grid__header {
   grid-area: header;
   background-color: darkgrey;
 }
-.sideLeft {
+.Grid__sideLeft {
   grid-area: sideLeft;
   background-color: antiquewhite;
 }
-.sideRight {
+.Grid__sideRight {
   grid-area: sideRight;
   background-color: antiquewhite;
 }
-.body {
+.Grid__body {
   grid-area: body;
   background-color: antiquewhite;
 }
-.footer {
+.Grid__footer {
   grid-area: footer;
   background-color: aqua;
 }
@@ -160,12 +179,12 @@ export default {
 //    |    | |    |
 //   |----| |----|
 // 3
-.one {
+.Grid__one {
   grid-column-start: 1;
   grid-column-end: 3;
   background: #19caad;
 }
-.two {
+.Grid__two {
   grid-column-start: 3;
   grid-column-end: 6;
   grid-row-start: 1;
@@ -174,7 +193,7 @@ export default {
   z-index: 1;
   background: #8cc7b5;
 }
-.three {
+.Grid__three {
   grid-column-start: 4;
   grid-column-end: 5;
   grid-row-start: 1;
@@ -182,26 +201,27 @@ export default {
   background: #d1ba74;
   z-index: 2;
 }
-.four {
+.Grid__four {
   grid-column-start: 1;
   grid-column-end: 2;
   grid-row-start: 2;
   grid-row-end: 5;
   background: #bee7e9;
 }
-.five {
+.Grid__five {
   grid-column-start: 2;
   grid-column-end: 3;
   grid-row-start: 2;
   grid-row-end: 5;
   background: #e6ceac;
 }
-.six {
+.Grid__six {
   grid-column: 5;
   grid-row: 4;
   background: #ecad9e;
 }
-.item {
+// 通用样式
+.Grid__item {
   padding: 10px;
   display: flex;
   align-items: center;

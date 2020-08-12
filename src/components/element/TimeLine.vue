@@ -9,7 +9,11 @@
     </div>
 
     <el-timeline :reverse="reverse">
-      <el-timeline-item v-for="(activity, index) in activities" :key="index" :timestamp="activity.timestamp">
+      <el-timeline-item
+        v-for="(activity, index) in activities"
+        :key="index"
+        :timestamp="activity.timestamp"
+      >
         <div class="Content__Item" @click="clickItem(activity)">
           {{ activity.content }}
         </div>
@@ -30,26 +34,12 @@ export default {
     [RadioGroup.name]: RadioGroup,
     [RadioButton.name]: RadioButton
   },
+  props: {
+    activities: Array[Object]
+  },
   data() {
     return {
-      reverse: true,
-      activities: [
-        {
-          content: '蒙布',
-          timestamp: '2020-08-06',
-          path: '/calendar'
-        },
-        {
-          content: '拖拽',
-          timestamp: '2020-08-07',
-          path: '/dragAndDrop'
-        },
-        {
-          content: 'Grid',
-          timestamp: '2020-08-10',
-          path: '/gridTest'
-        }
-      ]
+      reverse: true
     };
   },
   methods: {

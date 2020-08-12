@@ -4,17 +4,43 @@
       <router-view />
     </div>
     <div id="app__right">
-      <TimeLine />
+      <TimeLine :activities="activities" />
     </div>
   </div>
 </template>
 
 <script>
-import TimeLine from './components/TimeLine';
+import TimeLine from './components/element/TimeLine';
 
 export default {
   components: {
     TimeLine: TimeLine
+  },
+  data() {
+    return {
+      activities: [
+        {
+          content: '蒙布',
+          timestamp: '2020-08-06',
+          path: '/calendar'
+        },
+        {
+          content: '拖拽',
+          timestamp: '2020-08-07',
+          path: '/dragAndDrop'
+        },
+        {
+          content: 'Grid',
+          timestamp: '2020-08-10',
+          path: '/gridTest'
+        },
+        {
+          content: '组件封装',
+          timestamp: '2020-08-11',
+          path: '/myEleTable'
+        }
+      ]
+    };
   }
 };
 </script>
